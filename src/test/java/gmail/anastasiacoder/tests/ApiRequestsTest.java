@@ -10,10 +10,7 @@ import gmail.anastasiacoder.models.reqres.single_resource.SingleResource;
 import gmail.anastasiacoder.test_base.ApiRequestsBase;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
@@ -25,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @Owner("Ambidre")
 @Story("ReqresIn")
 @Feature("reqres.in")
-@Tag("API")
+@Tags({@Tag("API"),@Tag("Test")})
 public class ApiRequestsTest extends ApiRequestsBase {
 
     private RegistrationData registrationData;

@@ -16,6 +16,7 @@ import static org.hamcrest.Matchers.is;
 @Owner("AnotherQA")
 @Story("BookShop")
 @Feature("BookShopWithSpec")
+@Tag("STAGE")
 public class BookShopSpecificationTest extends ApiRequestsBase {
 
     String userLoginData = "{\"userName\": \"alex\"," +

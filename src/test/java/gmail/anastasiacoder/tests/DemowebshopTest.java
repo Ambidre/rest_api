@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Owner("Ambidre")
 @Story("DemoWebShop")
 @Feature("DemoWebShop")
+@Tag("STAGE")
 public class DemowebshopTest extends UiTestBase {
 
     private String body;
