@@ -16,7 +16,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Owner("nosova")
+@Owner("Ambidre")
 @Story("BookShop")
 @Feature("BookShop")
 @Tag("API")

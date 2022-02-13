@@ -11,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
-@Owner("nosova")
+@Owner("AnotherQA")
 @Story("BookShop")
 @Feature("BookShopWithSpec")
 public class BookShopSpecificationTest extends ApiRequestsBase {

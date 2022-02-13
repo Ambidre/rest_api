@@ -20,7 +20,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.with;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@Owner("nosova")
+@Owner("Ambidre")
 @Story("DemoWebShop")
 @Feature("DemoWebShop")
 public class DemowebshopTest extends UiTestBase {

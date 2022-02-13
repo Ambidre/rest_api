@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@Owner("nosova")
+@Owner("Ambidre")
 @Story("ReqresIn")
 @Feature("reqres.in")
 @Tag("API")

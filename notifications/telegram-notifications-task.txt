@@ -1,7 +1,7 @@
 //// local
 java  \
-"-DprojectName=PROJECT_NAME" \
-"-Denv=ENVIRONMENT" \
+"-DprojectName=REST API testing project" \
+"-Denv=prod" \
 "-DreportLink=BUILD_URL" \
 "-Dcomm=Any comment here" \
 "-Dconfig.file=notifications/telegram.json" \
