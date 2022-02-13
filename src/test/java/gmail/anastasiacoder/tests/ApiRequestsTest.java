@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @Owner("Ambidre")
 @Story("ReqresIn")
 @Feature("reqres.in")
-@Tags({@Tag("API"),@Tag("Test")})
+@Tags({@Tag("API"),@Tag("TEST")})
 public class ApiRequestsTest extends ApiRequestsBase {
 
     private RegistrationData registrationData;

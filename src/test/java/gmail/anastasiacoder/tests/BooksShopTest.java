@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Owner("Ambidre")
 @Story("BookShop")
 @Feature("BookShop")
-@Tags({@Tag("API"),@Tag("Test")})
+@Tags({@Tag("API"),@Tag("TEST")})
 public class BooksShopTest {
 
     private UserLoginData userLoginData = new UserLoginData();
