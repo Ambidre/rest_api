@@ -1,14 +1,13 @@
 package gmail.anastasiacoder.tests;
 
+import gmail.anastasiacoder.annotations.Layer;
+import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.models.books_shop.GenerateToken;
 import gmail.anastasiacoder.models.books_shop.UserLoginData;
 import io.qameta.allure.*;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static gmail.anastasiacoder.filters.CustomLogFilter.customLogFilter;
 import static io.qameta.allure.Allure.step;
@@ -16,6 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Layer("REST")
 @Owner("Ambidre")
 @Story("BookShop")
 @Feature("BookShop")
@@ -38,6 +38,10 @@ public class BooksShopTest {
         RestAssured.baseURI = "https://demoqa.com";
     }
 
+
+    @DisplayName("Тест без логов")
+    @Microservice("Books")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void noLogsTest() {
         step("Check API books without logs", () -> {
@@ -48,6 +52,9 @@ public class BooksShopTest {
         });
     }
 
+    @DisplayName("Тест со всеми логами")
+    @Microservice("Books")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void withAllLogsTest() {
         step("Check API books with all logs", () -> {
@@ -60,6 +67,9 @@ public class BooksShopTest {
         });
     }
 
+    @DisplayName("Тест с некоторыми логами")
+    @Microservice("Books")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void withSomeLogsTest() {
         step("Check API books with some logs", () -> {
@@ -73,6 +83,9 @@ public class BooksShopTest {
         });
     }
 
+    @DisplayName("Проверка авторизации")
+    @Microservice("Authorization")
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     @Disabled
     void authorizeApiTest() {
@@ -95,6 +108,9 @@ public class BooksShopTest {
         });
     }
 
+    @DisplayName("Проверка авторизации c Listener")
+    @Microservice("Authorization")
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     void authorizeWithListenerTest() {
         step("Check API user's authorize with Listener", () -> {
@@ -117,6 +133,9 @@ public class BooksShopTest {
         });
     }
 
+    @DisplayName("Проверка авторизации")
+    @Microservice("Authorization")
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     void authorizeWithTemplatesTest() {
         step("Check API user's authorize with custom log filter", () -> {

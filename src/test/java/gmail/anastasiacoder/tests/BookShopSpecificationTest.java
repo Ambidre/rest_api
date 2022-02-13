@@ -1,9 +1,10 @@
 package gmail.anastasiacoder.tests;
 
+import gmail.anastasiacoder.annotations.Layer;
+import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.test_base.ApiRequestsBase;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
+@Layer("REST")
 @Owner("AnotherQA")
 @Story("BookShop")
 @Feature("BookShopWithSpec")
@@ -19,7 +21,11 @@ public class BookShopSpecificationTest extends ApiRequestsBase {
     String userLoginData = "{\"userName\": \"alex\"," +
             "  \"password\": \"asdsad#frew_DFS2\"}";
 
+
+    @DisplayName("Авторизация со спецификацией")
+    @Microservice("Authorization")
     @Tag("API")
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     void authorizeWithSpecificationTest() {
         step("Check API user's authorize with specification", () -> {

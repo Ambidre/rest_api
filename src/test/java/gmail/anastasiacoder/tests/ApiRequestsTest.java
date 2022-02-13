@@ -1,6 +1,8 @@
 package gmail.anastasiacoder.tests;
 
 
+import gmail.anastasiacoder.annotations.Layer;
+import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.models.reqres.Registration;
 import gmail.anastasiacoder.models.reqres.RegistrationData;
 import gmail.anastasiacoder.models.reqres.Users;
@@ -9,6 +11,7 @@ import gmail.anastasiacoder.test_base.ApiRequestsBase;
 import io.qameta.allure.*;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -18,6 +21,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+@Layer("REST")
 @Owner("Ambidre")
 @Story("ReqresIn")
 @Feature("reqres.in")
@@ -31,6 +35,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         RestAssured.baseURI = "https://reqres.in/";
     }
 
+    @DisplayName("Успешная регистрация")
+    @Microservice("Registration")
+    @Severity(SeverityLevel.BLOCKER)
     @Test
     void registerSuccessful() {
         registrationData = new RegistrationData();
@@ -56,6 +63,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         });
     }
 
+    @DisplayName("Не успешная регистрация")
+    @Microservice("Registration")
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     void registerUnsuccessful() {
         registrationData = new RegistrationData();
@@ -76,6 +86,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         });
     }
 
+    @DisplayName("Создание юзера")
+    @Microservice("Users")
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     void createUser() {
         Users existUser = new Users();
@@ -103,6 +116,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         });
     }
 
+    @DisplayName("Юзер не найден")
+    @Microservice("Users")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void singleUserNotFound() {
         step("Check API user isn't found", () -> {
@@ -116,6 +132,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         });
     }
 
+    @DisplayName("Проверка информации по юзеру")
+    @Microservice("Users")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     void singleResource() {
         int expectedId = 2;
@@ -146,6 +165,9 @@ public class ApiRequestsTest extends ApiRequestsBase {
         });
     }
 
+    @DisplayName("Проверка наличия имени в списке")
+    @Microservice("Users")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void checkNameInListResource() {
         step("Check API name = ~/ru/ in LIST <RESOURCE>", () -> {

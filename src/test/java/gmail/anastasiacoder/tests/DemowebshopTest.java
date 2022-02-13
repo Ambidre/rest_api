@@ -1,10 +1,13 @@
 package gmail.anastasiacoder.tests;
 
 import com.codeborne.selenide.SelenideElement;
+import gmail.anastasiacoder.annotations.Layer;
+import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.models.demowebshop.WishList;
 import gmail.anastasiacoder.test_base.UiTestBase;
 import io.qameta.allure.*;
 import io.restassured.specification.RequestSpecification;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
@@ -20,6 +23,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.with;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Layer("REST")
 @Owner("Ambidre")
 @Story("DemoWebShop")
 @Feature("DemoWebShop")
@@ -33,6 +37,9 @@ public class DemowebshopTest extends UiTestBase {
             .log().all()
             .contentType("application/x-www-form-urlencoded; charset=UTF-8");
 
+    @DisplayName("Проверка списка желаемого")
+    @Microservice("Wish list")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     @Tag("API")
     void checkWishListAPI() {
@@ -57,6 +64,9 @@ public class DemowebshopTest extends UiTestBase {
         });
     }
 
+    @DisplayName("Проверка данных пользователя")
+    @Microservice("Address")
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     @Tags({@Tag("API"), @Tag("UI")})
     void checkUsersAddress() {
