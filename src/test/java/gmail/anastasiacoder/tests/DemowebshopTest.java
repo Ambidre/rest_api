@@ -1,6 +1,8 @@
 package gmail.anastasiacoder.tests;
 
 import com.codeborne.selenide.SelenideElement;
+import gmail.anastasiacoder.annotations.JiraIssue;
+import gmail.anastasiacoder.annotations.JiraIssues;
 import gmail.anastasiacoder.annotations.Layer;
 import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.models.demowebshop.WishList;
@@ -27,6 +29,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Owner("Ambidre")
 @Story("DemoWebShop")
 @Feature("DemoWebShop")
+@JiraIssues({@JiraIssue("HOMEWORK-335")})
 @Tag("STAGE")
 public class DemowebshopTest extends UiTestBase {
 

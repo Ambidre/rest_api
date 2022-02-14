@@ -1,5 +1,7 @@
 package gmail.anastasiacoder.tests;
 
+import gmail.anastasiacoder.annotations.JiraIssue;
+import gmail.anastasiacoder.annotations.JiraIssues;
 import gmail.anastasiacoder.annotations.Layer;
 import gmail.anastasiacoder.annotations.Microservice;
 import gmail.anastasiacoder.test_base.ApiRequestsBase;
@@ -16,6 +18,7 @@ import static org.hamcrest.Matchers.is;
 @Owner("AnotherQA")
 @Story("BookShop")
 @Feature("BookShopWithSpec")
+@JiraIssues({@JiraIssue("HOMEWORK-335")})
 @Tag("STAGE")
 public class BookShopSpecificationTest extends ApiRequestsBase {
 
