@@ -43,7 +43,7 @@
 gradle clean test
 ```
 
-## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Для запусков автотестов используется [Jenkins](https://jenkins.autotests.cloud/job/09-Ambidre-lesson19/)
+## <img width="4%" title="Jenkins" src="images/logo/Jenkins.svg"> Для запусков автотестов используется [Jenkins](https://jenkins.autotests.cloud/job/09-Ambidre-rest_api/)
 
 ![Jenkins](images/screens/jenkins.png)
 
@@ -61,7 +61,7 @@ gradle clean test
 
 ![Jenkins_Allure_Reports](images/screens/allure_detailes.png)
 
-## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/918/)
+## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/launch/10403)
 
 ### Основной дашборд
 
