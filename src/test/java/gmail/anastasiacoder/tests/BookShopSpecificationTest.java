@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.is;
 @Tag("STAGE")
 public class BookShopSpecificationTest extends ApiRequestsBase {
 
+    //Example of user's data without using a model
     String userLoginData = "{\"userName\": \"alex\"," +
             "  \"password\": \"asdsad#frew_DFS2\"}";
 
