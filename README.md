@@ -49,6 +49,11 @@ gradle clean test
 
 ## <img width="4%" title="Allure Report" src="images/logo/Allure_Report.svg"> Анализ результатов запусков в Jenkins через Allure Reports
 
+> <code>Allure-framework</code>используется в качестве инструмента для построения отчетов о прогоне автотестов.
+> Он позволяет получить информацию о ходе выполнения тестов, а также прикрепить скриншоты, логи и видео к формируемому отчету.
+> Имеется возможность указать различные теги, приоритеты и прочую сопутствующую информацию для тестов.
+
+
 ### Главная страница Allure-отчета
 
 ![Jenkins_Allure_Reports](images/screens/allure_dashbord.png)
@@ -61,7 +66,9 @@ gradle clean test
 
 ![Jenkins_Allure_Reports](images/screens/allure_detailes.png)
 
-## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/launch/10403)
+## <img width="4%" title="Allure TestOps" src="images/logo/Allure_TestOps.svg"> Интеграция тестов c тест-менеджмент системой [Allure TestOps](https://allure.autotests.cloud/project/1015/dashboards)
+
+> <code>Allure TestOps</code> используется для хранения всех авто и ручных тестов, запусков и их результатов, а также статистики и отчетов.
 
 ### Основной дашборд
 
@@ -94,12 +101,14 @@ gradle clean test
 ## <img width="4%" title="Jira" src="images/logo/Jira.svg"> Интеграция тестов c таск-трекер системой [Jira](https://jira.autotests.cloud/browse/HOMEWORK-335)
 
 > Интеграция с <code>Jira</code> позволяет добавлять в задачи тест-кейсы, запуски и их результаты.
+
 <p align="center">
 <img title="Jira Issues" src="images/screens/jira_issues.png">
 </p>
 
 ## <img width="4%" title="Telegram" src="images/logo/Telegram.svg"> Уведомления в Telegram с использованием бота
 > Реализована отправка уведомлений о прогоне с помощью бота в <code>Telegram</code>.
+
 <p align="center">
 <img title="Telegram Notifications" src="images/screens/telegram_notifications.png">
 </p>
