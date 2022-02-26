@@ -25,6 +25,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Tags({@Tag("API"),@Tag("TEST")})
 public class BooksShopTest {
 
+    String expectedStatus = "Success";
+    String expectedResult = "User authorized successfully.";
+
     private UserLoginData userLoginData = new UserLoginData();
 
     public UserLoginData setUserLoginData() {
@@ -32,9 +35,6 @@ public class BooksShopTest {
         userLoginData.setPassword("asdsad#frew_DFS2");
         return userLoginData;
     }
-
-    String expectedStatus = "Success";
-    String expectedResult = "User authorized successfully.";
 
     @BeforeAll
     static void prepare() {
